@@ -1,5 +1,4 @@
 const moment = require('moment')
-const _  = require('lodash')
 
 exports.transformTransactionsToUpdates = function(transactions) {
   /**
@@ -33,7 +32,7 @@ exports.transformTransactionsToUpdates = function(transactions) {
   // See example in comment above.
   const updates = transactions.map(function(transaction, i) {
     return {
-      range: `A${i + 2}:G${i + 2}`,
+      range: `A${i + 2}:D${i + 2}`,
       values: [_.flatten(Object.values(transaction))]
     }
   });

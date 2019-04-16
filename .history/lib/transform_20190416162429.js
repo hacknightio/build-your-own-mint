@@ -33,7 +33,7 @@ exports.transformTransactionsToUpdates = function(transactions) {
   // See example in comment above.
   const updates = transactions.map(function(transaction, i) {
     return {
-      range: `A${i + 2}:G${i + 2}`,
+      range: `A${i + 2}:Z${i + 2}`,
       values: [_.flatten(Object.values(transaction))]
     }
   });
